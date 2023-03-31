@@ -21,7 +21,17 @@ jobs:
               
             - name: Build app
               run : dotnet build -c Release --no-restore
-                
+
+            - name: Publish app 
+              run : dotnet publish -c Release -o .out/
+
+            - name: Deploy app to azure 
+              uses: azure/webapps-deploy@v2
+              with: 
+                app-name: ManagementTool2000
+                publish-profile: ${{ secrets.AZURE_WEB_APP_PUBLISH_SECRET }}
+                package: .out/
+
 
 
 
