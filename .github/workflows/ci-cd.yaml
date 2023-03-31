@@ -28,8 +28,8 @@ jobs:
             - name: Deploy app to azure 
               uses: azure/webapps-deploy@v2
               with: 
-                app-name: ManagementTool2000
-                publish-profile: ${{ secrets.AZURE_WEB_APP_PUBLISH_SECRET }}
+                app-name: video-games
+                publish-profile: ${{ secrets.AZURE_WEB_APP_PUBLISH_SECRET2 }}
                 package: .out/
 
 
