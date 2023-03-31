@@ -4,7 +4,7 @@ using VideoGame;
 namespace VideoGameManager.Controllers
 {
     [ApiController]
-    [Route("api/games")]
+    [Route("/")]
     public class GamesController:ControllerBase
     {
         private readonly VideoGamesContext context;
